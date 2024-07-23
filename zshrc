@@ -70,3 +70,17 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Java
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
+export MAVEN_HOME="/Users/rogze/code/maven/env/apache-maven-3.9.6"
+export PATH="$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin"
+
+# alias
+alias 1pademas="ssh -p 47535 -i /Users/rogze/.ssh/serveur_pademas_1 -L 8888:localhost:80 ubuntu@141.94.219.23    "
